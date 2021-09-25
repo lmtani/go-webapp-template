@@ -1,9 +1,18 @@
 # Go webapp template
 
-I aim to put the frontend inside the Go binary (using embed) to make it easy to distribute. I'm using [sausheong/invadersapp](https://github.com/sausheong/invadersapp) as a starter point.
+Go webapp with React and embebbed UI files.
 
-### Todo
+I'm using [sausheong/invadersapp](https://github.com/sausheong/invadersapp) as a starter point.
 
-- [x] Embed ui files in Go
-- [ ] Work in index.html to make it better
-- [ ] (Maybe) Add React
+### Build
+
+```sh
+$ node --version
+v15.10.0
+
+$ go version
+go version go1.16.5 linux/amd64
+
+$ cd ui && npm run build && cd -
+$ go build -ldflags="-s -w"
+```
